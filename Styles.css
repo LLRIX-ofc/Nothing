@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-image: url("assets/background-trapani-desktop.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.theme-button {
+  width: 460px; /* Fixed width on larger screens */
+  height: 90px; /* Adjust the height to fit the background image */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #9B8E68;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  background-image: url("assets/trapani_button_border.png"); /* Apply background image */
+  background-size: contain; /* Ensure the image fits within the button */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image */
+  font-size: 31px;
+  font-family: "titillium web";
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-image: url("assets/background-trapani.png"); /* Replace with your mobile image */
+  }
+
+  .container {
+    align-items: center; /* Center align on mobile */
+  }
+
+  .theme-button {
+    font-size: 26px; /* Slightly smaller font size */
+    height: 80px; /* Adjust button height */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    align-items: center; /* Ensure center alignment */
+  }
+  .logo {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  .theme-button {
+    width: 240px;
+    min-width: unset; /* Remove min-width */
+    font-size: 16px; /* Smaller font size */
+    height: 70px; /* Adjust button height for small screens */
+    margin-left: 0; /* Center button */
+  }
+
+  .button-container {
+    gap: 20px; /* Reduce gap between buttons */
+  }
+}
